@@ -1,0 +1,5 @@
+config SHIELD_TUNOTUNO_LEFT
+    def_bool $(shields_list_contains,tunotuno_left)
+
+config SHIELD_TUNOTUNO_RIGHT
+    def_bool $(shields_list_contains,tunotuno_right)

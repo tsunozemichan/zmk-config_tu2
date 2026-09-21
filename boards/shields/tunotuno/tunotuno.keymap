@@ -1,0 +1,48 @@
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more instructions.
+
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more instructions.
+//
+// Layout: QWERTY. Thumb switch (5 directions, right Raw3 col1-5) = &mo 1
+// (momentary layer-1). Layer 1 is currently a blank &trans placeholder --
+// fill it in later (numbers/symbols/nav/etc). Binding order matches
+// default_transform's map exactly: Raw0(L0-5,R0-6), Raw1, Raw2, Raw3(L0-5,R0-5).
+//
+// NOTE: M, comma, period, slash, and right-side modifiers (RSHFT/RCTRL/
+// RALT/RGUI) are not placed anywhere yet due to limited bottom-row space
+// (right Raw3 only has 1 regular key beside the thumb cluster). Add them
+// to layer 1 once you design it.
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = 
+                // Raw0: left Col0-5, right Col0-6
+                &kp N1    &kp N2  &kp N3  &kp N4  &kp N5  &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp BSPC
+                // Raw1
+                &kp TAB   &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P      &kp LBKT   &kp RBKT
+                // Raw2
+                &kp ESC   &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L   &kp SEMI   &kp SQT    &kp RET
+                // Raw3: left Col0-5, right Col0(SW4) + Col1-5(サムスイッチ5方向)
+                &kp LSHFT &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &mo 1   &mo 1   &mo 1   &mo 1      &mo 1
+            >;
+        };
+
+        layer_1 {
+            // Placeholder -- currently a pass-through layer (everything falls
+            // back to default_layer). Design the actual num/sym/nav layout here.
+            bindings = 
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+            >;
+        };
+    };
+};
