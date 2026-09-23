@@ -9,9 +9,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB_LOGGING
     default y
 
-config LOG
-    default y
-
 endif # SHIELD_TUNOTUNO_LEFT
 
 if SHIELD_TUNOTUNO_LEFT || SHIELD_TUNOTUNO_RIGHT
