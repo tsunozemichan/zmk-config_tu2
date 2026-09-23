@@ -13,8 +13,6 @@ if SHIELD_TUNOTUNO_LEFT || SHIELD_TUNOTUNO_RIGHT
 config ZMK_SPLIT
     default y
 
-config ZMK_USB_LOGGING
-    default y
 
 config LOG
     default y
