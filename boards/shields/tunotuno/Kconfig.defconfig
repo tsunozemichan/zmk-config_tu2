@@ -16,7 +16,4 @@ config ZMK_SPLIT
 config ZMK_USB_LOGGING
     default y
 
-config ZMK_LOG_LEVEL_WRN
-    default y
-
 endif # SHIELD_TUNOTUNO_LEFT || SHIELD_TUNOTUNO_RIGHT
