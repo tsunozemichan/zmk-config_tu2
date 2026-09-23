@@ -6,10 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-
-config LOG
-    default y
-
 endif # SHIELD_TUNOTUNO_LEFT
 
 if SHIELD_TUNOTUNO_LEFT || SHIELD_TUNOTUNO_RIGHT
