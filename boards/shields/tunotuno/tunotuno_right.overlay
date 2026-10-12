@@ -1,23 +1,18 @@
-// This file was generated from a template. Edit it to match your keyboard.
-// See https://zmk.dev/docs/development/hardware-integration/new-shield for more
-// instructions.
+// tunotuno right half: charlieplex
+//   gpios index 0..5 = D1..D6 (schematic nets pin1..pin6)
+//   interrupt        = D0 (schematic net IRQ)
+//   D7..D10 are reserved for the trackball (J1).
 
 #include "tunotuno.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <0>;
 };
 
 &kscan {
-    row-gpios
-        = <&xiao_d 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        ;
-    col-gpios
-        = <&xiao_d 0 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
+    interrupt-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    gpios
+        = <&xiao_d 1 GPIO_ACTIVE_HIGH>
         , <&xiao_d 2 GPIO_ACTIVE_HIGH>
         , <&xiao_d 3 GPIO_ACTIVE_HIGH>
         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
